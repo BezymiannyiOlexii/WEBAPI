@@ -12,13 +12,13 @@ namespace Web_api
         {
             RestClient restClient = new RestClient("https://content.dropboxapi.com/2/files/upload");
 
-            byte[] image = System.IO.File.ReadAllBytes(Initilize.filename);
+            //byte[] image = System.IO.File.ReadAllBytes(Initilize.filename);
 
             RestRequest restRequest = Initilize.Create_New_and_Format();
 
             restRequest.AddHeader("Authorization", "Bearer " + Initilize.token);
-            restRequest.AddHeader("Dropbox-API-Arg", "{\"path\":\"/folder/main.jpg\"}");
-            restRequest.AddParameter("application/octet-stream", image, "application/octet-stream", ParameterType.RequestBody);
+            restRequest.AddHeader("Dropbox-API-Arg", "{\"path\":\"/folder/main.txt\"}");
+            restRequest.AddParameter("application/octet-stream", "Hi guys", "application/octet-stream", ParameterType.RequestBody);
             restRequest.AddHeader("Content-Type", "application/octet-stream");
             //restRequest.AddJsonBody()
 
