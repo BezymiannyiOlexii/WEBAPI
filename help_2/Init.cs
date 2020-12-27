@@ -9,7 +9,7 @@ namespace Web_api
 {
     public class Initilize
     {
-        static public string filename = @"D:\study\С#\main.jpg"; //img from my PC
+        //static public string filename = @"D:\study\С#\main.jpg"; //img from my PC
         static public string token = "J6uJoHF4FAUAAAAAAAAAAQZftSlLkrIDIyUWxa21UMl72raM-ON2dpIqzoFJ82NS"; //my_dropbox
         static RestRequest _restRequest;
         static public RestRequest Create_New_and_Format()
@@ -24,7 +24,7 @@ namespace Web_api
         {
             _restRequest.AddHeader("Authorization", "Bearer " + token);
             _restRequest.AddHeader("Content-Type", "application/json");
-            _restRequest.AddJsonBody("{\"path\":\"/folder/main.jpg\"}");
+            _restRequest.AddJsonBody("{\"path\":\"/folder/main.txt\"}");
         }
 
     }
